@@ -31,9 +31,9 @@
                 <td class="align-middle">@produto.Descricao</td>
                 <td class="align-middle">@produto.Preco</td>
                 <td class="align-middle">@produto.Quantidade</td>
-                <td class="align-middle">
+                <td class="align-middle col-md-3">
                     <a class="btn btn-primary" asp-page="EditarProduto" asp-route-id="@produto.Id">Editar</a>
-                    <span>Ação 2</span>
+                    <a class="btn btn-success" asp-page="DetalhesProduto" asp-route-id="@produto.Id">Detalhes</a>
                     <a class="btn btn-danger" asp-page="DeletarProduto" asp-route-id="@produto.Id">Deletar</a>
                 </td>
             </tr>
