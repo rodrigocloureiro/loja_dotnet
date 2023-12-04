@@ -21,6 +21,6 @@ namespace at_test.Data.Models
         public int Quantidade { get; set; }
         public string? NomeImagem { get; set; }
         [NotMapped]
-        public IFormFile Upload { get; set; }
+        public IFormFile? Upload { get; set; }
     }
 }

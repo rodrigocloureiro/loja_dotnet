@@ -24,7 +24,7 @@ namespace at_test.Pages.Produto
         public IActionResult OnPost(int id)
         {
             ProdutoModel produtoAntigo = _context.Produtos.AsNoTracking().FirstOrDefault(prod => prod.Id == id);
-            ProdutoEditado.NomeImagem = produtoAntigo.NomeImagem;
+
             Console.WriteLine("\n\n");
             Console.WriteLine(id);
             Console.WriteLine(ProdutoEditado.Id);
@@ -36,11 +36,32 @@ namespace at_test.Pages.Produto
             Console.WriteLine(ProdutoEditado.NomeImagem);
             Console.WriteLine("\n\n");
 
-            if (!ModelState.IsValid) return Page();
+            if (!ModelState.IsValid)
+            {
+                var propriedadesComErros = ModelState.Where(x => x.Value.Errors.Any())
+                                            .Select(x => new { Propriedade = x.Key, Erros = x.Value.Errors })
+                                            .ToList();
+
+                // Faça o que for necessário com as propriedades com erros
+                // Por exemplo, você pode logar ou retornar uma resposta com os detalhes dos erros
+                foreach (var propriedadeComErro in propriedadesComErros)
+                {
+                    foreach (var erro in propriedadeComErro.Erros)
+                    {
+                        // Faça algo com o erro, como logar ou processar de alguma forma
+                        Console.WriteLine($"Propriedade: {propriedadeComErro.Propriedade}, Erro: {erro.ErrorMessage}");
+                    }
+                    return Page();
+                }
+            }
 
             if (ProdutoEditado.Upload is null)
             {
                 ProdutoEditado.NomeImagem = produtoAntigo.NomeImagem;
+            }
+            else
+            {
+                ProdutoEditado.NomeImagem = ProdutoEditado.Upload.FileName;
             }
 
             _context.Produtos.Update(ProdutoEditado);
