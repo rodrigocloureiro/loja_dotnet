@@ -1,7 +1,19 @@
+using at_test.Data;
+using Microsoft.EntityFrameworkCore;
+using System.Globalization;
+
 var builder = WebApplication.CreateBuilder(args);
+
+CultureInfo cultureInfo = new CultureInfo("en-US");
+CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
+CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<EsportivaContext>
+    (
+        options => options.UseSqlServer(builder.Configuration.GetConnectionString("Esportiva"))
+    );
 
 var app = builder.Build();
 
