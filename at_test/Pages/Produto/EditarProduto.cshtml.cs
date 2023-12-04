@@ -38,21 +38,7 @@ namespace at_test.Pages.Produto
 
             if (!ModelState.IsValid)
             {
-                var propriedadesComErros = ModelState.Where(x => x.Value.Errors.Any())
-                                            .Select(x => new { Propriedade = x.Key, Erros = x.Value.Errors })
-                                            .ToList();
-
-                // Faça o que for necessário com as propriedades com erros
-                // Por exemplo, você pode logar ou retornar uma resposta com os detalhes dos erros
-                foreach (var propriedadeComErro in propriedadesComErros)
-                {
-                    foreach (var erro in propriedadeComErro.Erros)
-                    {
-                        // Faça algo com o erro, como logar ou processar de alguma forma
-                        Console.WriteLine($"Propriedade: {propriedadeComErro.Propriedade}, Erro: {erro.ErrorMessage}");
-                    }
-                    return Page();
-                }
+                return Page();
             }
 
             if (ProdutoEditado.Upload is null)

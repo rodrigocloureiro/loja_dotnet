@@ -1,0 +1,36 @@
+﻿@page "/Produto/Adicionar"
+@model at_test.Pages.Produto.AdicionarProdutoModel
+@{
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Add" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label asp-for="NovoProduto.Nome">Nome</label>
+                <input asp-for="NovoProduto.Nome" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="NovoProduto.Descricao">Descrição</label>
+                <input asp-for="NovoProduto.Descricao" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="NovoProduto.Preco">Preço</label>
+                <input asp-for="NovoProduto.Preco" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="NovoProduto.Quantidade">Quantidade</label>
+                <input asp-for="NovoProduto.Quantidade" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="NovoProduto.Upload">Ilustração</label>
+                <input asp-for="NovoProduto.Upload" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-success">Adicionar</button>
+                <a asp-page="/Produto/ExibirProdutos" class="btn btn-warning">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
