@@ -14,12 +14,12 @@ namespace at_test.Data.Models
         [MinLength(5, ErrorMessage = "A descrição deve ter pelo menos 5 caracteres")]
         public string Descricao { get; set; }
         [Required]
-        [Range(0, float.MaxValue, ErrorMessage = "O preço deve ser um valor positivo")]
-        public float Preco { get; set; }
+        [Range(0, int.MaxValue, ErrorMessage = "O preço deve ser um valor positivo")]
+        public decimal Preco { get; set; }
         [Required]
         [Range(0, int.MaxValue, ErrorMessage = "A quantidade deve ser um valor positivo")]
         public int Quantidade { get; set; }
-        public string NomeImagem { get; set; }
+        public string? NomeImagem { get; set; }
         [NotMapped]
         public IFormFile Upload { get; set; }
     }

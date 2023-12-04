@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using at_test.Data;
 
@@ -10,9 +11,10 @@ using at_test.Data;
 namespace at_test.Migrations
 {
     [DbContext(typeof(EsportivaContext))]
-    partial class EsportivaContextModelSnapshot : ModelSnapshot
+    [Migration("20231204022354_AlterTypePrice")]
+    partial class AlterTypePrice
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

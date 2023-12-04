@@ -1,0 +1,41 @@
+﻿@page "/Produto/Editar/{id:int}"
+@model at_test.Pages.Produto.EditarProdutoModel
+@{
+}
+
+<h1>Editar</h1>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <input type="hidden" asp-for="ProdutoEditado.Id" />
+            <div class="mb-3">
+                <label asp-for="ProdutoEditado.Nome">Nome</label>
+                <input asp-for="ProdutoEditado.Nome" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="ProdutoEditado.Descricao">Descrição</label>
+                <input asp-for="ProdutoEditado.Descricao" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="ProdutoEditado.Preco">Preço</label>
+                <input asp-for="ProdutoEditado.Preco" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="ProdutoEditado.Quantidade">Quantidade</label>
+                <input asp-for="ProdutoEditado.Quantidade" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="ProdutoEditado.Upload">Ilustração</label>
+                <input asp-for="ProdutoEditado.Upload" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-success">Editar</button>
+                <a asp-page="/Produto/ExibirProdutos" class="btn btn-warning">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+

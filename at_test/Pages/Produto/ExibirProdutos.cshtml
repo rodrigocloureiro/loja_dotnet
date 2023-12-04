@@ -1,4 +1,42 @@
-﻿@page
+﻿@page "/Produto/Exibir"
 @model at_test.Pages.Produto.ExibirProdutosModel
 @{
 }
+
+<h1>Produtos</h1>
+
+<hr />
+
+<table class="table table-striped table-borderless">
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Ilustração</th>
+            <th>Produto</th>
+            <th>Descrição</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var produto in Model.Produtos)
+        {
+            <tr>
+                <td class="align-middle">@produto.Id</td>
+                <td class="align-middle">
+                    <img src="~/images/produtos/@produto.NomeImagem" style="width: 100px" />
+                </td>
+                <td class="align-middle">@produto.Nome</td>
+                <td class="align-middle">@produto.Descricao</td>
+                <td class="align-middle">@produto.Preco</td>
+                <td class="align-middle">@produto.Quantidade</td>
+                <td class="align-middle">
+                    <a class="btn btn-primary" asp-page="EditarProduto" asp-route-id="@produto.Id">Editar</a>
+                    <span>Ação 2</span>
+                    <span>Ação 3</span>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

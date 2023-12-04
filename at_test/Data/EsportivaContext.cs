@@ -17,7 +17,7 @@ namespace at_test.Data
                     Id = 1,
                     Nome = "Areia Lavada Saco 1KG",
                     Descricao = "Areia lavada Saco 1KG",
-                    Preco = 2.90f,
+                    Preco = 2.90m,
                     Quantidade = 500,
                     NomeImagem = "areia.png"
                 },
@@ -26,7 +26,7 @@ namespace at_test.Data
                     Id = 2,
                     Nome = "Cimento Votoram 25KG",
                     Descricao = "Saco cimento votoram 25KG",
-                    Preco = 27.90f,
+                    Preco = 27.90m,
                     Quantidade = 300,
                     NomeImagem = "cimento_votoram.png"
                 },
@@ -35,7 +35,7 @@ namespace at_test.Data
                     Id = 3,
                     Nome = "Tijolo Tradicional",
                     Descricao = "Tijolo Tradicional",
-                    Preco = 4.90f,
+                    Preco = 4.90m,
                     Quantidade = 400,
                     NomeImagem = "tijolo.png"
                 },
@@ -44,7 +44,7 @@ namespace at_test.Data
                     Id = 4,
                     Nome = "Tubo Esgoto PVC Série Normal 6M",
                     Descricao = "Tubo Esgoto PVC Série Normal 6M",
-                    Preco = 5.90f,
+                    Preco = 5.90m,
                     Quantidade = 100,
                     NomeImagem = "tubo_esgoto_pvc_6m.png"
                 }
