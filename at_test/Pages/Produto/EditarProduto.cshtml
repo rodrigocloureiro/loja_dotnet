@@ -18,18 +18,22 @@
             <div class="mb-3">
                 <label asp-for="ProdutoEditado.Nome">Nome</label>
                 <input asp-for="ProdutoEditado.Nome" class="form-control" />
+                <span asp-validation-for="ProdutoEditado.Nome" class="text-danger" />
             </div>
             <div class="mb-3">
                 <label asp-for="ProdutoEditado.Descricao">Descrição</label>
                 <input asp-for="ProdutoEditado.Descricao" class="form-control" />
+                <span asp-validation-for="ProdutoEditado.Descricao" class="text-danger" />
             </div>
             <div class="mb-3">
                 <label asp-for="ProdutoEditado.Preco">Preço</label>
                 <input asp-for="ProdutoEditado.Preco" class="form-control" />
+                <span asp-validation-for="ProdutoEditado.Preco" class="text-danger" />
             </div>
             <div class="mb-3">
                 <label asp-for="ProdutoEditado.Quantidade">Quantidade</label>
                 <input asp-for="ProdutoEditado.Quantidade" class="form-control" />
+                <span asp-validation-for="ProdutoEditado.Quantidade" class="text-danger" />
             </div>
             <div class="mb-3">
                 <label asp-for="ProdutoEditado.Upload">Ilustração</label>

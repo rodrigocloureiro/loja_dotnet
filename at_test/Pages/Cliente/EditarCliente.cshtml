@@ -15,14 +15,17 @@
             <div class="mb-3">
                 <label asp-for="ClienteEditado.Nome">Nome</label>
                 <input asp-for="ClienteEditado.Nome" class="form-control" />
+                <span asp-validation-for="ClienteEditado.Nome" class="text-danger" />
             </div>
             <div class="mb-3">
                 <label asp-for="ClienteEditado.Cpf">CPF</label>
                 <input asp-for="ClienteEditado.Cpf" class="form-control" />
+                <span asp-validation-for="ClienteEditado.Cpf" class="text-danger" />
             </div>
             <div class="mb-3">
                 <label asp-for="ClienteEditado.DataNascimento">Data de Nascimento</label>
                 <input asp-for="ClienteEditado.DataNascimento" class="form-control" />
+                <span asp-validation-for="ClienteEditado.DataNascimento" class="text-danger" />
             </div>
             <div class="mb-3">
                 <button class="btn btn-success">Editar</button>

@@ -14,18 +14,22 @@
             <div class="mb-3">
                 <label asp-for="NovoProduto.Nome">Nome</label>
                 <input asp-for="NovoProduto.Nome" class="form-control" />
+                <span asp-validation-for="NovoProduto.Nome" class="text-danger" />
             </div>
             <div class="mb-3">
                 <label asp-for="NovoProduto.Descricao">Descrição</label>
                 <input asp-for="NovoProduto.Descricao" class="form-control" />
+                <span asp-validation-for="NovoProduto.Descricao" class="text-danger" />
             </div>
             <div class="mb-3">
                 <label asp-for="NovoProduto.Preco">Preço</label>
                 <input asp-for="NovoProduto.Preco" class="form-control" />
+                <span asp-validation-for="NovoProduto.Preco" class="text-danger" />
             </div>
             <div class="mb-3">
                 <label asp-for="NovoProduto.Quantidade">Quantidade</label>
                 <input asp-for="NovoProduto.Quantidade" class="form-control" />
+                <span asp-validation-for="NovoProduto.Quantidade" class="text-danger" />
             </div>
             <div class="mb-3">
                 <label asp-for="NovoProduto.Upload">Ilustração</label>
