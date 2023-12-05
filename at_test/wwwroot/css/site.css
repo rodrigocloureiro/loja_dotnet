@@ -36,3 +36,7 @@ h1 {
 .hover-underline:hover {
     text-decoration: underline !important;
 }
+
+footer .col-md-4 {
+    line-height: normal;
+}

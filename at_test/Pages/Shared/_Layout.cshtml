@@ -57,16 +57,25 @@
                     <p class="fw-bolder color-esportiva">Barra da Tijuca, Rio de Janeiro</p>
                     <p class="fw-bold color-esportiva">(21) 9912-5003</p>
                 </div>
-                <div class="col-md-4" style="line-height: normal">
-                    <p>
-                        <a class="text-muted text-decoration-none hover-underline fw-bolder color-esportiva" asp-area="" asp-page="/Sobre">Sobre Nós</a>
-                    </p>
-                    <p>
-                        <a class="text-muted text-decoration-none hover-underline fw-bolder color-esportiva" asp-area="" asp-page="/Produto/ExibirProdutos">Produtos</a>
-                    </p>
-                    <p>
-                        <a class="text-muted text-decoration-none hover-underline fw-bolder color-esportiva" asp-area="" asp-page="/Cliente/ExibirClientes">Clientes</a>
-                    </p>
+                <div class="col-md-4">
+                    @if (IsSectionDefined("ProdutoFooter"))
+                        @RenderSection("ProdutoFooter")
+                    else if (IsSectionDefined("ClienteFooter"))
+                        @RenderSection("ClienteFooter")
+                    else if (IsSectionDefined("SobreFooter"))
+                        @RenderSection("SobreFooter")
+                    else
+                    {
+                        <p>
+                            <a class="text-muted text-decoration-none hover-underline fw-bolder color-esportiva" asp-area="" asp-page="/Sobre">Sobre Nós</a>
+                        </p>
+                        <p>
+                            <a class="text-muted text-decoration-none hover-underline fw-bolder color-esportiva" asp-area="" asp-page="/Produto/ExibirProdutos">Produtos</a>
+                        </p>
+                        <p>
+                            <a class="text-muted text-decoration-none hover-underline fw-bolder color-esportiva" asp-area="" asp-page="/Cliente/ExibirClientes">Clientes</a>
+                        </p>
+                    }
                 </div>
             </div>
         </div>
