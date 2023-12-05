@@ -1,18 +1,38 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+}
+
+h1 {
+    color: #1498d5;
+}
+
+.logo {
+    width: 150px
+}
+
+.nav-bg-color {
+    background-color: #0000000d !important;
+}
+
+.color-esportiva {
+    color: #1498d5 !important
+}
+
+.hover-underline:hover {
+    text-decoration: underline !important;
 }

@@ -3,16 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - at_test</title>
+    <title>Esportiva - @ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/at_test.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 nav-bg-color">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">at_test</a>
+                <a class="navbar-brand" asp-area="" asp-page="/Index">
+                    <img class="logo" src="~/images/esportiva/esportiva.png" title="Home" />
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -20,16 +22,16 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <a class="nav-link hover-underline fw-bolder color-esportiva" asp-area="" asp-page="/Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class="nav-link hover-underline fw-bolder color-esportiva" asp-area="" asp-page="/Sobre">Sobre Nós</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Produto/ExibirProdutos">Produtos</a>
+                            <a class="nav-link hover-underline fw-bolder color-esportiva" asp-area="" asp-page="/Produto/ExibirProdutos">Produtos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Cliente/ExibirClientes">Clientes</a>
+                            <a class="nav-link hover-underline fw-bolder color-esportiva" asp-area="" asp-page="/Cliente/ExibirClientes">Clientes</a>
                         </li>
                     </ul>
                 </div>
@@ -44,7 +46,29 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - at_test - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            <div class="row p-3 d-flex justify-content-between align-items-center">
+                <div class="col-md-4">
+                    <a asp-area="" asp-page="/Index">
+                        <img class="logo" src="~/images/esportiva/logo.png" title="Home" />
+                    </a>
+                </div>
+                <div class="col-md-4" style="line-height: normal">
+                    <p class="fw-bolder color-esportiva">Av. das Américas, 4666</p>
+                    <p class="fw-bolder color-esportiva">Barra da Tijuca, Rio de Janeiro</p>
+                    <p class="fw-bold color-esportiva">(21) 9912-5003</p>
+                </div>
+                <div class="col-md-4" style="line-height: normal">
+                    <p>
+                        <a class="text-muted text-decoration-none hover-underline fw-bolder color-esportiva" asp-area="" asp-page="/Sobre">Sobre Nós</a>
+                    </p>
+                    <p>
+                        <a class="text-muted text-decoration-none hover-underline fw-bolder color-esportiva" asp-area="" asp-page="/Produto/ExibirProdutos">Produtos</a>
+                    </p>
+                    <p>
+                        <a class="text-muted text-decoration-none hover-underline fw-bolder color-esportiva" asp-area="" asp-page="/Cliente/ExibirClientes">Clientes</a>
+                    </p>
+                </div>
+            </div>
         </div>
     </footer>
 
