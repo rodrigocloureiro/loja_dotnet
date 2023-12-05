@@ -25,17 +25,6 @@ namespace at_test.Pages.Produto
         {
             ProdutoModel produtoAntigo = _context.Produtos.AsNoTracking().FirstOrDefault(prod => prod.Id == id);
 
-            Console.WriteLine("\n\n");
-            Console.WriteLine(id);
-            Console.WriteLine(ProdutoEditado.Id);
-            Console.WriteLine(ProdutoEditado.Nome);
-            Console.WriteLine(ProdutoEditado.Descricao);
-            Console.WriteLine(ProdutoEditado.Preco);
-            Console.WriteLine(ProdutoEditado.Quantidade);
-            Console.WriteLine(ProdutoEditado.Upload);
-            Console.WriteLine(ProdutoEditado.NomeImagem);
-            Console.WriteLine("\n\n");
-
             if (!ModelState.IsValid)
             {
                 return Page();
@@ -49,6 +38,11 @@ namespace at_test.Pages.Produto
             {
                 ProdutoEditado.NomeImagem = ProdutoEditado.Upload.FileName;
             }
+
+            ProdutoEditado.DataRegistro = _context.Produtos
+                .AsNoTracking()
+                .FirstOrDefault(produto => produto.Id == id)
+                .DataRegistro;
 
             _context.Produtos.Update(ProdutoEditado);
             _context.SaveChanges();

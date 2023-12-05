@@ -47,7 +47,7 @@ namespace at_test.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ClienteModel");
+                    b.ToTable("Clientes");
 
                     b.HasData(
                         new
@@ -92,6 +92,9 @@ namespace at_test.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<DateTime>("DataRegistro")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Descricao")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -117,6 +120,7 @@ namespace at_test.Migrations
                         new
                         {
                             Id = 1,
+                            DataRegistro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Descricao = "Areia lavada Saco 1KG",
                             Nome = "Areia Lavada Saco 1KG",
                             NomeImagem = "areia.png",
@@ -126,6 +130,7 @@ namespace at_test.Migrations
                         new
                         {
                             Id = 2,
+                            DataRegistro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Descricao = "Saco cimento votoram 25KG",
                             Nome = "Cimento Votoram 25KG",
                             NomeImagem = "cimento_votoram.png",
@@ -135,6 +140,7 @@ namespace at_test.Migrations
                         new
                         {
                             Id = 3,
+                            DataRegistro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Descricao = "Tijolo Tradicional",
                             Nome = "Tijolo Tradicional",
                             NomeImagem = "tijolo.png",
@@ -144,6 +150,7 @@ namespace at_test.Migrations
                         new
                         {
                             Id = 4,
+                            DataRegistro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Descricao = "Tubo Esgoto PVC Série Normal 6M",
                             Nome = "Tubo Esgoto PVC Série Normal 6M",
                             NomeImagem = "tubo_esgoto_pvc_6m.png",

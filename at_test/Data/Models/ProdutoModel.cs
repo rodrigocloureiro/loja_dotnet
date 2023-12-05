@@ -19,6 +19,8 @@ namespace at_test.Data.Models
         [Required]
         [Range(0, int.MaxValue, ErrorMessage = "A quantidade deve ser um valor positivo")]
         public int Quantidade { get; set; }
+        [Required]
+        public DateTime DataRegistro { get; set; }
         public string? NomeImagem { get; set; }
         [NotMapped]
         public IFormFile? Upload { get; set; }

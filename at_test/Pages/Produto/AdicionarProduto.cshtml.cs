@@ -46,6 +46,8 @@ namespace at_test.Pages.Produto
                 NovoProduto.NomeImagem = "imagem_naocadastrada.png";
             }
 
+            NovoProduto.DataRegistro = DateTime.Now;
+
             _context.Produtos.Add(NovoProduto);
             _context.SaveChanges();
 
