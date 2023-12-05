@@ -1,0 +1,31 @@
+﻿@page "/Cliente/Adicionar"
+@model at_test.Pages.Cliente.AdicionarClienteModel
+@{
+}
+
+<h1>Adicionar cliente</h1>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Add" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label asp-for="NovoCliente.Nome">Nome</label>
+                <input asp-for="NovoCliente.Nome" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="NovoCliente.Cpf">CPF</label>
+                <input asp-for="NovoCliente.Cpf" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="NovoCliente.DataNascimento">Data de Nascimento</label>
+                <input asp-for="NovoCliente.DataNascimento" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-success">Adicionar</button>
+                <a asp-page="/Cliente/ExibirClientes" class="btn btn-warning">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
