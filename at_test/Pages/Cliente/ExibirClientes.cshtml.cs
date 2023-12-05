@@ -4,21 +4,21 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
-namespace at_test.Pages.Produto
+namespace at_test.Pages.Cliente
 {
-    public class ExibirProdutosModel : PageModel
+    public class ExibirClientesModel : PageModel
     {
         private EsportivaContext _context;
-        public List<ProdutoModel> Produtos { get; set; }
+        public List<ClienteModel> Clientes { get; set; }
 
-        public ExibirProdutosModel(EsportivaContext context)
+        public ExibirClientesModel(EsportivaContext context)
         {
             _context = context;
         }
 
-        public void OnGet()
+        public void OnGet(int id)
         {
-            Produtos = _context.Produtos.ToList();
+            Clientes = _context.Clientes.ToList();
         }
     }
 }

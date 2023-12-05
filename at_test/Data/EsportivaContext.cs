@@ -9,6 +9,7 @@ namespace at_test.Data
         public EsportivaContext(DbContextOptions<EsportivaContext> options) : base(options) { }
 
         public DbSet<ProdutoModel> Produtos { get; set; }
+        public DbSet<ClienteModel> Clientes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
