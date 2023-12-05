@@ -2,6 +2,7 @@ using at_test.Data;
 using at_test.Data.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 
 namespace at_test.Pages.Cliente
 {
@@ -27,6 +28,11 @@ namespace at_test.Pages.Cliente
             {
                 return Page();
             }
+
+            ClienteEditado.DataCadastro = _context.Clientes
+                .AsNoTracking()
+                .FirstOrDefault(cliente => cliente.Id == id)
+                .DataCadastro;
 
             _context.Clientes.Update(ClienteEditado);
             _context.SaveChanges();
