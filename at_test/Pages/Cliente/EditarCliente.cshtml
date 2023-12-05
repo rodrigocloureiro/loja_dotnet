@@ -1,0 +1,32 @@
+﻿@page "/Cliente/Editar/{id:int}"
+@model at_test.Pages.Cliente.EditarClienteModel
+@{
+}
+
+<h1>Editar</h1>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <input type="hidden" asp-for="ClienteEditado.Id" />
+            <div class="mb-3">
+                <label asp-for="ClienteEditado.Nome">Nome</label>
+                <input asp-for="ClienteEditado.Nome" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="ClienteEditado.Cpf">CPF</label>
+                <input asp-for="ClienteEditado.Cpf" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="ClienteEditado.DataNascimento">Data de Nascimento</label>
+                <input asp-for="ClienteEditado.DataNascimento" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-success">Editar</button>
+                <a asp-page="/Cliente/ExibirClientes" class="btn btn-warning">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
