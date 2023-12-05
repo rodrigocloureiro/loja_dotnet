@@ -17,6 +17,10 @@ body {
     margin-bottom: 60px;
 }
 
+.container-main {
+    margin-bottom: 10%;
+}
+
 h1 {
     color: #1498d5;
 }
@@ -35,6 +39,30 @@ h1 {
 
 .hover-underline:hover {
     text-decoration: underline !important;
+}
+
+.img-table {
+    width: 100px;
+}
+
+.img-100 {
+    max-width: 100px;
+}
+
+.img-200 {
+    max-width: 200px;
+}
+
+.img-300 {
+    max-width: 300px;
+}
+
+.img-400 {
+    max-width: 400px;
+}
+
+.img-500 {
+    max-width: 500px;
 }
 
 footer .col-md-4 {

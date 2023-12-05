@@ -12,6 +12,9 @@
     <div class="col-md-6">
         <form asp-action="Edit" enctype="multipart/form-data">
             <input type="hidden" asp-for="ProdutoEditado.Id" />
+            <div class="mb-3 d-flex justify-content-center">
+                <img class="img-200" src="~/images/produtos/@Model.ProdutoEditado.NomeImagem" title="@Model.ProdutoEditado.Nome" />
+            </div>
             <div class="mb-3">
                 <label asp-for="ProdutoEditado.Nome">Nome</label>
                 <input asp-for="ProdutoEditado.Nome" class="form-control" />
