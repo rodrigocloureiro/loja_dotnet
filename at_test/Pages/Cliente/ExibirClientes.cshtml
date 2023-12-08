@@ -17,7 +17,6 @@
             <th>Nome</th>
             <th>CPF</th>
             <th>Data de Nascimento</th>
-            <th>Data de Cadastro</th>
             <th>Ações</th>
         </tr>
     </thead>
@@ -29,7 +28,6 @@
                 <td class="align-middle">@cliente.Nome</td>
                 <td class="align-middle">@cliente.Cpf</td>
                 <td class="align-middle">@cliente.DataNascimento</td>
-                <td class="align-middle">@cliente.DataCadastro</td>
                 <td class="align-middle col-md-3">
                     <a class="btn btn-primary" asp-page="EditarCliente" asp-route-id="@cliente.Id">Editar</a>
                     <a class="btn btn-success" asp-page="DetalhesCliente" asp-route-id="@cliente.Id">Detalhes</a>
