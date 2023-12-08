@@ -1,19 +1,4 @@
-﻿INSERT INTO
-	Produtos
-VALUES
-	('Esse produto será deletado', 'Esse produto tem uma função: SER DELETADO', '999.99', '999', NULL);
-
-SELECT
-	*
-FROM
-	Produtos;
-
-SELECT
-	*
-FROM
-	Clientes;
-
-SELECT
+﻿SELECT
 	*
 FROM
 	Clientes
@@ -21,6 +6,19 @@ ORDER BY
 	Clientes.DataCadastro
 DESC;
 
+/**/
+
+SELECT *
+FROM Produtos 
+ORDER BY Produtos.DataRegistro DESC;
+
+/**/
+
 SELECT COUNT(*) FROM Clientes;
 SELECT COUNT(Id) FROM Clientes;
 SELECT COUNT(Nome) FROM Clientes;
+
+/**/
+
+SELECT COUNT(*) FROM Produtos;
+SELECT COUNT(Nome) FROM Produtos;
