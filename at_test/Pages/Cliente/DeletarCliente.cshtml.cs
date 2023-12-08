@@ -1,5 +1,6 @@
 using at_test.Data;
 using at_test.Data.Models;
+using at_test.Data.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -7,17 +8,17 @@ namespace at_test.Pages.Cliente
 {
     public class DeletarClienteModel : PageModel
     {
-        private EsportivaContext _context;
+        private IRepositoryCliente _repo;
         public ClienteModel Cliente { get; set; }
 
-        public DeletarClienteModel(EsportivaContext context)
+        public DeletarClienteModel(IRepositoryCliente repo)
         {
-            _context = context;
+            _repo = repo;
         }
 
         public void OnGet(int id)
         {
-            Cliente = _context.Clientes.FirstOrDefault(cliente => cliente.Id == id);
+            Cliente = _repo.GetById(id);
         }
 
         public IActionResult OnPost(int id)
@@ -27,8 +28,7 @@ namespace at_test.Pages.Cliente
                 return Page();
             }
 
-            _context.Clientes.Remove(_context.Clientes.Find(id));
-            _context.SaveChanges();
+            _repo.Delete(id);
 
             return RedirectToPage("ExibirClientes");
         }

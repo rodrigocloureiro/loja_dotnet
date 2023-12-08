@@ -1,4 +1,5 @@
 using at_test.Data;
+using at_test.Data.Repository;
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
 
@@ -14,6 +15,7 @@ builder.Services.AddDbContext<EsportivaContext>
     (
         options => options.UseSqlServer(builder.Configuration.GetConnectionString("Esportiva"))
     );
+builder.Services.AddScoped<IRepositoryCliente, ClienteRepository>();
 
 var app = builder.Build();
 
