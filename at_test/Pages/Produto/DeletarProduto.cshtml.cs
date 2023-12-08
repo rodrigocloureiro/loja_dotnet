@@ -1,5 +1,6 @@
 using at_test.Data;
 using at_test.Data.Models;
+using at_test.Data.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -7,17 +8,17 @@ namespace at_test.Pages.Produto
 {
     public class DeletarProdutoModel : PageModel
     {
-        private EsportivaContext _context;
+        private IRepositoryProduto _repo;
         public ProdutoModel Produto { get; set; }
 
-        public DeletarProdutoModel(EsportivaContext context)
+        public DeletarProdutoModel(IRepositoryProduto repo)
         {
-            _context = context;
+            _repo = repo;
         }
 
         public void OnGet(int id)
         {
-            Produto = _context.Produtos.FirstOrDefault(prod => prod.Id == id);
+            Produto = _repo.GetById(id);
         }
 
         public IActionResult OnPost(int id)
@@ -27,8 +28,7 @@ namespace at_test.Pages.Produto
                 return Page();
             }
 
-            _context.Produtos.Remove(_context.Produtos.Find(id));
-            _context.SaveChanges();
+            _repo.Delete(id);
 
             return RedirectToPage("ExibirProdutos");
         }

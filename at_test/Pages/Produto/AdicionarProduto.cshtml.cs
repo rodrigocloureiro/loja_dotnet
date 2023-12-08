@@ -1,5 +1,6 @@
 using at_test.Data;
 using at_test.Data.Models;
+using at_test.Data.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -7,20 +8,18 @@ namespace at_test.Pages.Produto
 {
     public class AdicionarProdutoModel : PageModel
     {
-        private EsportivaContext _context;
-        private IWebHostEnvironment _environment;
+        private IRepositoryProduto _repo;
         [BindProperty]
         public ProdutoModel NovoProduto { get; set; }
 
-        public AdicionarProdutoModel(EsportivaContext context, IWebHostEnvironment environment)
+        public AdicionarProdutoModel(IRepositoryProduto repo)
         {
-            _context = context;
-            _environment = environment;
+            _repo = repo;
         }
 
         public void OnGet(int id)
         {
-            NovoProduto = _context.Produtos.FirstOrDefault(produto => produto.Id == id);
+            NovoProduto = _repo.GetById(id);
         }
 
         public IActionResult OnPost(int id)
@@ -30,26 +29,7 @@ namespace at_test.Pages.Produto
                 return Page();
             }
 
-            if (NovoProduto.Upload is not null)
-            {
-                NovoProduto.NomeImagem = NovoProduto.Upload.FileName;
-
-                string arquivoImagem = Path.Combine(_environment.ContentRootPath, "wwwroot/images/produtos", NovoProduto.Upload.FileName);
-
-                using (FileStream fs = new FileStream(arquivoImagem, FileMode.Create))
-                {
-                    NovoProduto.Upload.CopyTo(fs);
-                }
-            }
-            else
-            {
-                NovoProduto.NomeImagem = "imagem_naocadastrada.png";
-            }
-
-            NovoProduto.DataRegistro = DateTime.Now;
-
-            _context.Produtos.Add(NovoProduto);
-            _context.SaveChanges();
+            _repo.Add(NovoProduto);
 
             return RedirectToPage("ExibirProdutos");
         }

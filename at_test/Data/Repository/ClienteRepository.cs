@@ -22,9 +22,9 @@ namespace at_test.Data.Repository
 
         public void Delete(int id)
         {
-            ClienteModel produtoDeletado = GetById(id);
+            ClienteModel clienteDeletado = GetById(id);
 
-            _context.Clientes.Remove(produtoDeletado);
+            _context.Clientes.Remove(clienteDeletado);
             _context.SaveChanges();
         }
 

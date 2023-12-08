@@ -16,6 +16,7 @@ builder.Services.AddDbContext<EsportivaContext>
         options => options.UseSqlServer(builder.Configuration.GetConnectionString("Esportiva"))
     );
 builder.Services.AddScoped<IRepositoryCliente, ClienteRepository>();
+builder.Services.AddScoped<IRepositoryProduto, ProdutoRepository>();
 
 var app = builder.Build();
 

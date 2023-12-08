@@ -1,5 +1,6 @@
 using at_test.Data;
 using at_test.Data.Models;
+using at_test.Data.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -7,17 +8,17 @@ namespace at_test.Pages.Produto
 {
     public class DetalhesProdutoModel : PageModel
     {
-        private EsportivaContext _context;
+        private IRepositoryProduto _repo;
         public ProdutoModel Produto { get; set; }
 
-        public DetalhesProdutoModel(EsportivaContext context)
+        public DetalhesProdutoModel(IRepositoryProduto repo)
         {
-            _context = context;
+            _repo = repo;
         }
 
         public void OnGet(int id)
         {
-            Produto = _context.Produtos.FirstOrDefault(produto => produto.Id == id);
+            Produto = _repo.GetById(id);
         }
     }
 }
