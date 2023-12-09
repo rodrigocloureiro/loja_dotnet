@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using at_test.Data;
 
@@ -11,9 +12,10 @@ using at_test.Data;
 namespace at_test.Migrations
 {
     [DbContext(typeof(EsportivaContext))]
-    partial class EsportivaContextModelSnapshot : ModelSnapshot
+    [Migration("20231209034357_DataSeedingProdutos")]
+    partial class DataSeedingProdutos
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -119,81 +121,81 @@ namespace at_test.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 10,
-                            DataRegistro = new DateTime(2022, 7, 29, 15, 36, 12, 0, DateTimeKind.Unspecified),
+                            Id = 1,
+                            DataRegistro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Descricao = "Camisa Vasco Branca III (Edição Especial) 2022/2023 – Versão Torcedor",
                             Nome = "Camisa Vasco Branca III 2022/2023",
-                            NomeImagem = "camisa_vasco_III.png",
+                            NomeImagem = "camisa_vasco_III",
                             Preco = 359.90m,
                             Quantidade = 500
                         },
                         new
                         {
-                            Id = 11,
-                            DataRegistro = new DateTime(2022, 7, 29, 15, 36, 12, 0, DateTimeKind.Unspecified),
+                            Id = 2,
+                            DataRegistro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Descricao = "Camisa Vasco Preta III (Goleiro - Edição Especial) 2022/2023 – Todos os Patrocinadores – Versão Torcedor",
                             Nome = "Camisa Vasco Preta III (Goleiro) 2022/2023",
-                            NomeImagem = "camisa_vasco_III_goleiro.png",
+                            NomeImagem = "camisa_vasco_III_goleiro",
                             Preco = 359.90m,
                             Quantidade = 450
                         },
                         new
                         {
-                            Id = 12,
-                            DataRegistro = new DateTime(2023, 9, 25, 11, 17, 25, 0, DateTimeKind.Unspecified),
+                            Id = 3,
+                            DataRegistro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Descricao = "Camisa Vasco III Branco – (Goleiro) 2023/2024 – Versão Torcedor",
                             Nome = "Camisa Vasco III Branco – (Goleiro) 2023/2024",
-                            NomeImagem = "camisa_vasco_branco_goleiro_2023_2024.png",
+                            NomeImagem = "camisa_vasco_branco_goleiro_2023_2024",
                             Preco = 329.90m,
                             Quantidade = 300
                         },
                         new
                         {
-                            Id = 13,
-                            DataRegistro = new DateTime(2023, 7, 12, 13, 34, 46, 0, DateTimeKind.Unspecified),
+                            Id = 4,
+                            DataRegistro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Descricao = "Camisa Vasco Azul Claro – (Goleiro) 2023/2024 – Versão Torcedor",
                             Nome = "Camisa Vasco Azul Claro – (Goleiro) 2023/2024",
-                            NomeImagem = "camisa_vasco_goleiro_azul_claro_2023_2024.png",
+                            NomeImagem = "camisa_vasco_goleiro_azul_claro_2023_2024",
                             Preco = 299.90m,
                             Quantidade = 390
                         },
                         new
                         {
-                            Id = 14,
-                            DataRegistro = new DateTime(2023, 8, 15, 10, 0, 5, 0, DateTimeKind.Unspecified),
+                            Id = 5,
+                            DataRegistro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Descricao = "Camisa Al Nassr Home 2023/2024 – Versão Torcedor",
                             Nome = "Camisa Al Nassr Home 2023/2024",
-                            NomeImagem = "camisa_al_nassr_home_2023_2024.png",
+                            NomeImagem = "camisa_al_nassr_home_2023_2024",
                             Preco = 299.90m,
                             Quantidade = 100
                         },
                         new
                         {
-                            Id = 15,
-                            DataRegistro = new DateTime(2023, 8, 15, 10, 0, 5, 0, DateTimeKind.Unspecified),
+                            Id = 6,
+                            DataRegistro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Descricao = "Camisa Al Nassr Away 2023/2024 – Versão Torcedor",
                             Nome = "Camisa Al Nassr Away 2023/2024",
-                            NomeImagem = "camisa_al_nassr_away_2023_2024.png",
+                            NomeImagem = "camisa_al_nassr_away_2023_2024",
                             Preco = 299.90m,
                             Quantidade = 70
                         },
                         new
                         {
-                            Id = 16,
-                            DataRegistro = new DateTime(2023, 8, 15, 10, 30, 5, 0, DateTimeKind.Unspecified),
+                            Id = 7,
+                            DataRegistro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Descricao = "Camisa Benfica Away 2023/2024 – Versão Torcedor",
                             Nome = "Camisa Benfica Away 2023/2024",
-                            NomeImagem = "camisa_benfica_away_2023_2024.png",
+                            NomeImagem = "camisa_benfica_away_2023_2024",
                             Preco = 299.90m,
                             Quantidade = 90
                         },
                         new
                         {
-                            Id = 17,
-                            DataRegistro = new DateTime(2023, 9, 17, 17, 2, 25, 0, DateTimeKind.Unspecified),
+                            Id = 8,
+                            DataRegistro = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Descricao = "Camisa Manchester United (Goleiro) 2023/2024 Verde – Versão Torcedor",
                             Nome = "Camisa Manchester United Verde (Goleiro) 2023/2024",
-                            NomeImagem = "camisa_manchester_united_goleiro_2023_2024_verde.png",
+                            NomeImagem = "camisa_manchester_united_goleiro_2023_2024_verde",
                             Preco = 299.90m,
                             Quantidade = 50
                         });

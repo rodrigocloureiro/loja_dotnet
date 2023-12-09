@@ -16,39 +16,83 @@ namespace at_test.Data
             modelBuilder.Entity<ProdutoModel>().HasData(
                 new ProdutoModel()
                 {
-                    Id = 1,
-                    Nome = "Areia Lavada Saco 1KG",
-                    Descricao = "Areia lavada Saco 1KG",
-                    Preco = 2.90m,
+                    Id = 10,
+                    Nome = "Camisa Vasco Branca III 2022/2023",
+                    Descricao = "Camisa Vasco Branca III (Edição Especial) 2022/2023 – Versão Torcedor",
+                    Preco = 359.90m,
                     Quantidade = 500,
-                    NomeImagem = "areia.png"
+                    NomeImagem = "camisa_vasco_III.png",
+                    DataRegistro = new DateTime(2022, 7, 29, 15, 36, 12)
                 },
                 new ProdutoModel()
                 {
-                    Id = 2,
-                    Nome = "Cimento Votoram 25KG",
-                    Descricao = "Saco cimento votoram 25KG",
-                    Preco = 27.90m,
+                    Id = 11,
+                    Nome = "Camisa Vasco Preta III (Goleiro) 2022/2023",
+                    Descricao = "Camisa Vasco Preta III (Goleiro - Edição Especial) 2022/2023 – Todos os Patrocinadores – Versão Torcedor",
+                    Preco = 359.90m,
+                    Quantidade = 450,
+                    NomeImagem = "camisa_vasco_III_goleiro.png",
+                    DataRegistro = new DateTime(2022, 7, 29, 15, 36, 12)
+                },
+                new ProdutoModel()
+                {
+                    Id = 12,
+                    Nome = "Camisa Vasco III Branco – (Goleiro) 2023/2024",
+                    Descricao = "Camisa Vasco III Branco – (Goleiro) 2023/2024 – Versão Torcedor",
+                    Preco = 329.90m,
                     Quantidade = 300,
-                    NomeImagem = "cimento_votoram.png"
+                    NomeImagem = "camisa_vasco_branco_goleiro_2023_2024.png",
+                    DataRegistro = new DateTime(2023, 9, 25, 11, 17, 25)
                 },
                 new ProdutoModel()
                 {
-                    Id = 3,
-                    Nome = "Tijolo Tradicional",
-                    Descricao = "Tijolo Tradicional",
-                    Preco = 4.90m,
-                    Quantidade = 400,
-                    NomeImagem = "tijolo.png"
+                    Id = 13,
+                    Nome = "Camisa Vasco Azul Claro – (Goleiro) 2023/2024",
+                    Descricao = "Camisa Vasco Azul Claro – (Goleiro) 2023/2024 – Versão Torcedor",
+                    Preco = 299.90m,
+                    Quantidade = 390,
+                    NomeImagem = "camisa_vasco_goleiro_azul_claro_2023_2024.png",
+                    DataRegistro = new DateTime(2023, 7, 12, 13, 34, 46)
                 },
                 new ProdutoModel()
                 {
-                    Id = 4,
-                    Nome = "Tubo Esgoto PVC Série Normal 6M",
-                    Descricao = "Tubo Esgoto PVC Série Normal 6M",
-                    Preco = 5.90m,
+                    Id = 14,
+                    Nome = "Camisa Al Nassr Home 2023/2024",
+                    Descricao = "Camisa Al Nassr Home 2023/2024 – Versão Torcedor",
+                    Preco = 299.90m,
                     Quantidade = 100,
-                    NomeImagem = "tubo_esgoto_pvc_6m.png"
+                    NomeImagem = "camisa_al_nassr_home_2023_2024.png",
+                    DataRegistro = new DateTime(2023, 8, 15, 10, 00, 05)
+                },
+                new ProdutoModel()
+                {
+                    Id = 15,
+                    Nome = "Camisa Al Nassr Away 2023/2024",
+                    Descricao = "Camisa Al Nassr Away 2023/2024 – Versão Torcedor",
+                    Preco = 299.90m,
+                    Quantidade = 70,
+                    NomeImagem = "camisa_al_nassr_away_2023_2024.png",
+                    DataRegistro = new DateTime(2023, 8, 15, 10, 00, 05)
+                },
+                new ProdutoModel()
+                {
+                    Id = 16,
+                    Nome = "Camisa Benfica Away 2023/2024",
+                    Descricao = "Camisa Benfica Away 2023/2024 – Versão Torcedor",
+                    Preco = 299.90m,
+                    Quantidade = 90,
+                    NomeImagem = "camisa_benfica_away_2023_2024.png",
+                    DataRegistro = new DateTime(2023, 8, 15, 10, 30, 05)
+                },
+                new ProdutoModel()
+                {
+                    Id = 17,
+                    Nome = "Camisa Manchester United Verde (Goleiro) 2023/2024",
+                    Descricao = "Camisa Manchester United (Goleiro) 2023/2024 Verde – Versão Torcedor",
+                    Preco = 299.90m,
+                    Quantidade = 50,
+                    NomeImagem = "camisa_manchester_united_goleiro_2023_2024_verde.png",
+                    DataRegistro = new DateTime(2023, 9, 17, 17, 02, 25)
                 }
             );
 
