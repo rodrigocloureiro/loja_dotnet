@@ -49,7 +49,7 @@ namespace at_test.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ClienteModel");
+                    b.ToTable("Clientes");
 
                     b.HasData(
                         new

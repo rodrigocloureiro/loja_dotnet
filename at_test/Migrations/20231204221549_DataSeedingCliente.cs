@@ -9,24 +9,8 @@ namespace at_test.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
-                name: "ClienteModel",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Cpf = table.Column<string>(type: "nvarchar(14)", maxLength: 14, nullable: false),
-                    DataNascimento = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    DataCadastro = table.Column<DateTime>(type: "datetime2", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_ClienteModel", x => x.Id);
-                });
-
             migrationBuilder.InsertData(
-                table: "ClienteModel",
+                table: "Clientes",
                 columns: new[] { "Id", "Cpf", "DataCadastro", "DataNascimento", "Nome" },
                 values: new object[,]
                 {
@@ -39,8 +23,25 @@ namespace at_test.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "ClienteModel");
+            migrationBuilder.DeleteData(
+                table: "Clientes",
+                keyColumn: "Id",
+                keyValue: 1);
+
+            migrationBuilder.DeleteData(
+                table: "Clientes",
+                keyColumn: "Id",
+                keyValue: 2);
+
+            migrationBuilder.DeleteData(
+                table: "Clientes",
+                keyColumn: "Id",
+                keyValue: 3);
+
+            migrationBuilder.DeleteData(
+                table: "Clientes",
+                keyColumn: "Id",
+                keyValue: 4);
         }
     }
 }
