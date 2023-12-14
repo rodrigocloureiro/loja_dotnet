@@ -28,7 +28,9 @@
             <tr>
                 <td class="align-middle">@produto.Id</td>
                 <td class="align-middle">
-                    <img class="img-table" src="~/images/produtos/@produto.NomeImagem" title="@produto.Nome" />
+                    <a asp-page="DetalhesProduto" asp-route-id="@produto.Id" title="@produto.Nome">
+                        <img class="img-table" src="~/images/produtos/@produto.NomeImagem" title="@produto.Nome" />
+                    </a>
                 </td>
                 <td class="align-middle">@produto.Nome</td>
                 <td class="align-middle">@produto.Descricao</td>
